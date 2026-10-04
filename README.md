@@ -1,16 +1,84 @@
-# React + Vite
+# InternTracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A web-based internship application tracker designed to help students organize and manage their internship applications from a single dashboard.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+https://interntrackerqq.netlify.app/
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 📊 Dashboard for tracking internship applications
+- 📝 Add and manage internship applications
+- 🔄 Track application status
+- 📅 Organize important application details
+- 🎯 Clean and focused interface
+- 📱 Responsive design
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- JavaScript
+- Vite
+- Tailwind CSS
+- HTML5
+- CSS
+
+## 📂 Project Structure
+
+```text
+InternTracker/
+├── public/
+├── src/
+├── .gitignore
+├── index.html
+├── package.json
+├── package-lock.json
+├── eslint.config.js
+├── postcss.config.js
+├── tailwind.config.js
+└── vite.config.js
+```
+
+## ⚙️ Getting Started
+
+### Clone the repository
+
+```bash
+git clone https://github.com/Mr-X69/InternTracker.git
+cd InternTracker
+```
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Run the development server
+
+```bash
+npm run dev
+```
+
+Open the local URL shown in the terminal.
+
+## 🏗️ Build
+
+```bash
+npm run build
+```
+
+The production build will be generated in the `dist` folder.
+
+## 🌐 Deployment
+
+The project is deployed on Netlify and connected to this GitHub repository for continuous deployment.
+
+## 🎯 Purpose
+
+InternTracker was built to provide students with a simple and centralized way to keep track of their internship applications and application progress.
+
+## 📄 License
+
+This project is intended for educational and portfolio purposes.
