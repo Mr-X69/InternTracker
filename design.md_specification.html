@@ -1,0 +1,74 @@
+# Design System Specification: Slate & Monolith (InternTracker)
+
+## 1. Vision & North Star
+**"The Digital Architect"**
+A high-density, professional aesthetic inspired by modern engineering tools like Linear and Vercel. The system prioritizes clarity, performance, and a "pro-tool" feel through minimalist styling, precise geometry, and sophisticated data visualization.
+
+---
+
+## 2. Visual Identity & Theming
+
+### 2.1 Color Palette (Dual-Theme Engine)
+The system utilizes a high-contrast foundation with a focus on depth and subtle separation.
+
+| Layer | Dark Mode (Deep Slate) | Light Mode (Paper White) |
+| :--- | :--- | :--- |
+| **Background** | `#0B0F19` | `#FFFFFF` |
+| **Surface** | `#111827` (elevated) | `#F9FAFB` |
+| **Border** | `rgba(255, 255, 255, 0.06)` | `rgba(0, 0, 0, 0.08)` |
+| **Primary Accent** | `#DDE5FF` (Soft Blue) | `#2563EB` (Deep Blue) |
+| **Success** | `#10B981` (Muted Green) | `#059669` |
+| **Urgency/Danger** | `#EF4444` | `#DC2626` |
+| **Muted Text** | `#9EAACE` | `#6B7280` |
+
+### 2.2 Typography
+Exclusively utilizes high-legibility grotesque families to maintain a technical edge.
+- **Primary Font:** `Inter` or `Geist`
+- **Headings:** Semibold (600) to Bold (700) with `-0.02em` letter spacing for a compact, professional look.
+- **Body:** Regular (400) to Medium (500) for UI labels.
+- **Data/Monospace:** `JetBrains Mono` or `Inter` (tabular figures enabled) for metrics and scores.
+
+### 2.3 Geometry & Spacing
+- **Radius:** `0.5rem` (8px) for standard components; `0.25rem` (4px) for small badges.
+- **Grid:** 4px baseline grid.
+- **Borders:** 1px solid semi-transparent borders are preferred over heavy shadows to define structure.
+
+---
+
+## 3. Core Components
+
+### 3.1 Navigation Systems
+- **Fixed Sidebar:** Slim (72px collapsed, 240px expanded) on the left. Features high-stroke custom icons and a "by QudraQuorum" sub-brand.
+- **Top Bar:** Glassmorphism effect (`backdrop-blur-xl`) with a search input and a high-end theme toggle.
+- **User Card:** Professional avatar with `{User Name}` placeholder, located at the bottom of the navigation rail.
+
+### 3.2 Job Cards (Kanban)
+- **Structure:** High-density cards with 1px borders.
+- **Features:** 
+    - Circular company logo placeholders.
+    - Match Score: Horizontal progress bar using a `conic-gradient` or solid accent fill.
+    - Urgency Badge: Transitions to red when deadline is < 24h.
+
+### 3.3 Data Visualization
+- **Velocity Graph:** Anti-aliased Bézier curves with a linear gradient fill (`rgba(accent, 0.2)` to transparent).
+- **Match Score Ring:** Radial progress chart used in the AI Workspace for high-impact scoring.
+
+### 3.4 Feedback & Messaging
+- **AI Workspace Panes:** Split-pane layouts for "Input" (Source) and "Analysis" (Output) with clear hierarchical separation.
+- **Beta Badges:** Subtle, low-saturation badges for upcoming features like the Browser Extension.
+
+---
+
+## 4. Interaction Principles
+- **Transitions:** Snappy, cubic-bezier(0.4, 0, 0.2, 1) timing (150ms-200ms).
+- **Hovers:** Tonal shifts rather than color changes (e.g., surface color brightening by 2-4%).
+- **Theme Switching:** Smooth cross-fade transition for all color variables.
+
+---
+
+## 5. Ownership & Credits
+**InternTracker** is a standalone business platform developed by:
+- Manthan Katrojwar
+- Sarthak Kare
+- Saurabh Godase
+- Tanay Damre

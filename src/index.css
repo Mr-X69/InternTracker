@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap');
+
+@import "tailwindcss";
+
+@config "../tailwind.config.js";
+
+/* We use the backward compatible @config for now so things work flawlessly */
+@layer base {
+  :root {
+    --bg: #FFFFFF;
+    --surface: #F9FAFB;
+    --surface2: #E5E7EB; /* Subtle elevated light */
+    --border: rgba(0, 0, 0, 0.08);
+    --accent: #2563EB; /* Deep Blue from DESIGN.md */
+    --accent2: #059669; /* Success from DESIGN.md */
+    --accent3: #4F46E5;
+    --accent4: #9A3412;
+    --danger: #DC2626; /* Urgency from DESIGN.md */
+    --text: #111827;
+    --muted: #6B7280; /* Muted from DESIGN.md */
+    --font-head: 'Inter', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    --radius: 0.5rem;
+    --radius-sm: 0.25rem;
+    --shadow: 0 4px 16px rgba(0,0,0,0.05);
+  }
+
+  .dark {
+    --bg: #0B0F19;
+    --surface: #111827;
+    --surface2: #1f2937;
+    --border: rgba(255, 255, 255, 0.12); /* Slightly higher visibility for structural borders */
+    --accent: #DDE5FF; /* Soft Blue */
+    --accent2: #10B981; /* Muted Green */
+    --accent3: #6366F1;
+    --accent4: #D946EF;
+    --danger: #EF4444;
+    --text: #F9FAFB;
+    --muted: #9EAACE; /* Muted Text from DESIGN.md */
+    --shadow: 0 8px 32px rgba(0,0,0,0.4);
+  }
+
+  body {
+    @apply bg-bg text-text antialiased;
+    font-family: var(--font-body);
+    transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* ── Scrollbar ── */
+  ::-webkit-scrollbar { width: 6px; } 
+  ::-webkit-scrollbar-track { background: var(--bg); } 
+  ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+}
+
+@layer components {
+  /* Common Buttons mapped from original HTML */
+  .btn {
+    @apply inline-flex items-center gap-1.5 px-4 py-[7px] rounded-[var(--radius-sm)] border border-transparent font-body text-[13px] font-semibold cursor-pointer transition-all duration-200;
+  }
+  .btn-primary {
+    @apply bg-accent text-white dark:text-gray-900 border-accent hover:brightness-110;
+  }
+  .btn-ghost {
+    @apply bg-transparent text-muted border-border hover:text-text hover:border-muted;
+  }
+  .btn-danger {
+    @apply bg-danger/10 text-danger border-danger hover:bg-danger/20;
+  }
+  .btn-sm {
+    @apply px-2.5 py-1 text-[11.5px];
+  }
+  .btn-green {
+    @apply bg-accent2/10 text-accent2 border-accent2 hover:bg-accent2/20;
+  }
+  .btn-blue {
+    @apply bg-accent3/10 text-accent3 border-accent3 hover:bg-accent3/20;
+  }
+  .tag {
+    @apply text-[10px] px-1.5 py-[2px] rounded-full font-semibold inline-block border border-transparent;
+  }
+  .tag-blue { @apply bg-accent3/10 text-accent3; }
+  .tag-green { @apply bg-accent2/10 text-accent2; }
+  .tag-orange { @apply bg-accent/10 text-accent; }
+  .tag-purple { @apply bg-accent4/10 text-accent4; }
+  .tag-red { @apply bg-danger/10 text-danger; }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
